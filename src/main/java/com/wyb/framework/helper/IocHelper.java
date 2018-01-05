@@ -25,7 +25,7 @@ public final class IocHelper {
 				Field []beanFields=beanClass.getDeclaredFields();
 				if(ArrayUtil.isNotEmpty(beanFields)){
 					for(Field beanfield:beanFields){
-						if(beanfield.isAnnotationPresent(Inject.class)){
+						if(beanfield.isAnnotationPresent(Inject.class)){//被@Inject标记的成员变量
 							Class<?> beanFieldClass=beanfield.getType();//获取变量的类名
 							Object beanFieldInstance=beanMap.get(beanFieldClass);
 							if(beanFieldInstance!=null){

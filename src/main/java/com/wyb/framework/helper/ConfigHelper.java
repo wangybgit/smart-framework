@@ -3,6 +3,7 @@ package com.wyb.framework.helper;
 import java.util.Properties;
 
 import com.wyb.framework.ConfigConstant;
+import com.wyb.framework.util.PropsUtil;
 
 public class ConfigHelper {
 	

@@ -14,8 +14,6 @@ import java.util.jar.JarFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.wyb.framework.helper.StringUtil;
-
 /**
  * 类加载工具类
  * @author Administrator
@@ -47,6 +45,11 @@ public class ClassUtil {
 		}
 		return cls;
 	}
+	//不带参数isInitialized时，默认false
+	public static Class<?> loadClass(String className){
+		return loadClass(className,false);
+	}
+	
 	
 	 /**
      * 获取指定包名下所有的类；

@@ -1,4 +1,4 @@
-package com.wyb.framework.helper;
+package com.wyb.framework.util;
 
 public final class CastUtil {
     /*
