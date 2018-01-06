@@ -47,7 +47,7 @@ public class DispatcherServlet extends HttpServlet{
 		jspServlet.addMapping(ConfigHelper.getAppJspPath(),"*");
 		//注册处理静态资源的默认Servlet
 		ServletRegistration defaultServlet=servletContext.getServletRegistration("default");
-		jspServlet.addMapping(ConfigHelper.getAppAssetPath(),"*");
+		defaultServlet.addMapping(ConfigHelper.getAppAssetPath(),"*");
 
 	}
 
