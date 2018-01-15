@@ -21,7 +21,7 @@ public final class JsonUtil {
         try {
             json = OBJECT_MAPPER.writeValueAsString(object);
         } catch (Exception e) {
-            LOGGER.error("convert POJO to JSON failure ", e);
+            LOGGER.error("convert POJO to JSON failure ",e);
             throw new RuntimeException(e);
         }
         return json;

@@ -1,6 +1,7 @@
 package com.wyb.framework;
 
 
+import com.wyb.framework.helper.AopHelper;
 import com.wyb.framework.helper.BeanHelper;
 import com.wyb.framework.helper.ClassHelper;
 import com.wyb.framework.helper.ControllerHelper;
@@ -13,9 +14,10 @@ public final class HelperLoader {
 		Class<?> []classList={
 			ClassHelper.class,
 			BeanHelper.class,
+			AopHelper.class,
 			IocHelper.class,
 			ControllerHelper.class
-		};
+		};//注意先后顺序
 		
 		for(Class<?> cls:classList){
 			ClassUtil.loadClass(cls.getName(),true);//需要加载静态块，原书中没有true？？？
